@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<XY_orarend>
+    <ora id="01" tipus="elmelet">
+        <targy>Webtech</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>08</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>XXX</helyszin>
+        <oktato>Agardi_Anita</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="01" tipus="gyakorlat">
+        <targy>Webtech</targy>
+        <idopont>
+            <nap>hetfo</nap>
+            <tol>16</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszin>INF 202</helyszin>
+        <oktato>Agardi_Anita</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="02" tipus="elmelet">
+        <targy>Mesint</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>09</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>II</helyszin>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="03" tipus="Elemelet">
+        <targy>XML</targy>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>XXXII</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="02" tipus="gyakorlat">
+        <targy>Mesint</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>09</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>INF 15</helyszin>
+        <oktato>Fazekas Levente</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="03" tipus="gyakorlat">
+        <targy>XML</targy>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>INF 101</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="04" tipus="elmelet">
+        <targy>Szofttech</targy>
+        <idopont>
+            <nap>csutortok</nap>
+            <tol>08</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszin>XXXIII</helyszin>
+        <oktato>Dr. Mileff Péter</oktato>
+        <szak>G3BP</szak>
+    </ora>
+
+    <ora id="04" tipus="gyakorlat">
+        <targy>Szofttech</targy>
+        <idopont>
+            <nap>csutortok</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+    </ora>
+    <helyszin>XXXII</helyszin>
+    <oktato>Dr. Mileff Péter</oktato>
+    <szak>G3BP</szak>
+
+</XY_orarend>
