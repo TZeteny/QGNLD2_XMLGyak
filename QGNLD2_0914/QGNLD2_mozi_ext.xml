@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mozi>
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <rendezo id = "nzk_4xm_2jb" nev="alex"/>
+        <szinesz id="u5q_4xm_2jb" nev="Madison_Ivy"/>
+        <iro id="trv_4xm_2jb"/>
+    </film>
+
+    <film>
+    
+    </film id="txn_mxm_3jb" mufaj="kaland">
+        <producer id = "bzk_mxm_3jb" nev="Meccshegyi_Istvan"/>
+        <dramaturg id = "grz_mxm_3jb" nev="Yevgeny_Volgin"/>
+        <operator id = "g0t_mxm_3jb" nev="Dagger_Opera"/>
+        <szinesz id = "txo_mxm_3jb"/>
+            <gyerekszinesz id = "cqc_mxm_3jb" nev="Jack"/>
+            <musicalszinesz id = "3gg_mxm_3jb" nev="Adam_Ocelot"/>
+            <szinkronszinesz id = "dgg_mxm_3jb" nev="David_Hayter"/>
+        </szinesz>
+    </film>
+
+</mozi>
