@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+    <cim>Baking_potatoes</cim>
+
+    <hallgatok>
+        <hallgato>
+            <nev>Samwise_Gamgee</nev>
+            <lakcim>Bag_End</lakcim>
+        </hallgato>
+    </hallgatok>
+
+    <helyszin>The_Mill</helyszin>
+
+    <eloado>
+        <nev>Farmer_Maggot</nev>
+        <adoszam>0123456789</adoszam>
+        <lakcim>Bamfurlong</lakcim>
+    </eloado>
+
+    <datum>4th_age_1</datum>
+
+</konferencia>
