@@ -82,7 +82,7 @@
         </idopont>
         <helyszin>XXXIII</helyszin>
         <oktato>Dr. Mileff Péter</oktato>
-        <szak>G3BP</szak>
+        <szak>G2BP</szak>
     </ora>
 
     <ora id="04" tipus="gyakorlat">
@@ -95,6 +95,6 @@
     </ora>
     <helyszin>XXXII</helyszin>
     <oktato>Dr. Mileff Péter</oktato>
-    <szak>G3BP</szak>
+    <szak>G2BP</szak>
 
 </XY_orarend>
