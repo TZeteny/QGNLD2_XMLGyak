@@ -1,0 +1,5 @@
+<!ELEMENT XY_adatbazis (dolgozo)>
+<!ELEMENT dolgozo (kod, nev, fizetes)>
+<!ELEMENT kod (#PCDATA)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT fizetes (#PCDATA)>

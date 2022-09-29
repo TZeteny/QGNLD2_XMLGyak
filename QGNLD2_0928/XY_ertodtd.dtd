@@ -1,0 +1,15 @@
+<!ELEMENT A (a, b, c)>
+<!ELEMENT a (#PCDATA)>
+<!ELEMENT b (x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT c (d, e)>
+<!ELEMENT d (#PCDATA)>
+<!ELEMENT e (#PCDATA)>
+<!ELEMENT B (a, b)>
+<!ELEMENT b (x, y)>
+<!ELEMENT x (#PCDATA)>
+<!ELEMENT y (#PCDATA)>
+<!ELEMENT C (a, b)>
+<!ELEMENT a (#PCDATA)>
+<!ELEMENT b (#PCDATA)>

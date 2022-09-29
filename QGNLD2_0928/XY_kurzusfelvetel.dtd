@@ -1,0 +1,15 @@
+<!ELEMENT kurzusfelvetel (hallgato, kurzusok)>
+<!ELEMENT hallgato (hnev, szulev, szak)>
+<!ELEMENT hnev (#PCDATA)>
+<!ELEMENT szulev (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ELEMENT kurzusok (kurzus)>
+<!ELEMENT kurzus (kurzusnev*, kredit, hely, idopont+, oktato?, oraado?, jovahagyas)>
+<!ELEMENT kurzusnev (#PCDATA)>
+<!ELEMENT kredit (#PCDATA)>
+<!ELEMENT hely (#PCDATA)>
+<!ELEMENT idopont (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT oraado (#PCDATA)>
+<!ELEMENT jovahagyas EMPTY>
+<!ATTLIST jovahagyas igennem CDATA "nem">

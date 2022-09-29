@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<A>
+    <a>a</a>
+    <b>
+        <x>x</x>
+        <y>y</y>
+    </b>
+    <c>
+        <d>d</d>
+        <e>e</e>
+    </c>
+
+    <B>
+        <a>a</a>
+        <b>
+            <x>x</x>
+            <y>y</y>
+        </b>
+        
+        <C>
+            <a>a</a>
+            <b>b</b>
+        </C>
+
+    </B>
+
+</A>
