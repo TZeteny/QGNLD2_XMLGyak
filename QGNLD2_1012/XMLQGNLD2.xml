@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vendeglatas>
+    <!--Ettermek-->
+    <etterem ekod="e1">
+        <nev></nev>
+        <cim>
+            <varos></varos>
+            <utca></utca>
+            <hazszam></hazszam>
+        </cim>
+        <csillag></csillag>
+    </etterem>
+
+    <etterem ekod="e2">
+        <nev></nev>
+        <cim>
+            <varos></varos>
+            <utca></utca>
+            <hazszam></hazszam>
+        </cim>
+        <csillag></csillag>
+    </etterem>
+
+    <foszakacs fkod="f1">
+        <nev></nev>
+        <eletkor></eletkor>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </foszakacs>
+
+    <foszakacs fkod="f2">
+        <nev></nev>
+        <eletkor></eletkor>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </foszakacs>
+
+    <szakacs szkod="sz1">
+        <nev></nev>
+        <reszleg></reszleg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+
+    <szakacs szkod="sz2">
+        <nev></nev>
+        <reszleg></reszleg>
+        <vegzettseg></vegzettseg>
+        <vegzettseg></vegzettseg>
+    </szakacs>
+
+    <gyakornok gykod="gy1">
+        <nev></nev>
+        <gyakorlat>
+            <kezdete></kezdete>
+            <idotartama></idotartama>
+        </gyakorlat>
+        <muszak></muszak>
+        <muszak></muszak>
+    </gyakornok>
+
+    <gyakornok gykod="gy2">
+        <nev></nev>
+        <gyakorlat>
+            <kezdete></kezdete>
+            <idotartama></idotartama>
+        </gyakorlat>
+        <muszak></muszak>
+        <muszak></muszak>
+    </gyakornok>
+
+    <vendeg vkod="v1">
+        <nev></nev>
+        <eletkor></eletkor>
+        <cim>
+            <varos></varos>
+            <utca></utca>
+            <hazszam></hazszam>
+        </cim>
+    </vendeg>
+
+    <vendeg vkod="v2">
+        <nev></nev>
+        <eletkor></eletkor>
+        <cim>
+            <varos></varos>
+            <utca></utca>
+            <hazszam></hazszam>
+        </cim>
+    </vendeg>
+
+    <rendeles>
+        <osszeg></osszeg>
+        <etel></etel>
+    </rendeles>
+
+</vendeglatas>
