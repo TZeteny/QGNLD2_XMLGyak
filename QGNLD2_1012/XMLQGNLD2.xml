@@ -3,13 +3,13 @@
 <vendeglatas>
     <!--Ettermek-->
     <etterem ekod="e1">
-        <nev></nev>
+        <nev>Gofri palota</nev>
         <cim>
-            <varos></varos>
-            <utca></utca>
-            <hazszam></hazszam>
+            <varos>Miskolc</varos>
+            <utca>Hunyadi</utca>
+            <hazszam>13</hazszam>
         </cim>
-        <csillag></csillag>
+        <csillag>3</csillag>
     </etterem>
 
     <etterem ekod="e2">
@@ -21,7 +21,8 @@
         </cim>
         <csillag></csillag>
     </etterem>
-
+    
+    <!--Foszakacsok-->
     <foszakacs fkod="f1">
         <nev></nev>
         <eletkor></eletkor>
@@ -35,7 +36,8 @@
         <vegzettseg></vegzettseg>
         <vegzettseg></vegzettseg>
     </foszakacs>
-
+    
+    <!--Szakacsok-->
     <szakacs szkod="sz1">
         <nev></nev>
         <reszleg></reszleg>
@@ -50,6 +52,7 @@
         <vegzettseg></vegzettseg>
     </szakacs>
 
+    <!--Gyakornokok-->
     <gyakornok gykod="gy1">
         <nev></nev>
         <gyakorlat>
@@ -70,6 +73,7 @@
         <muszak></muszak>
     </gyakornok>
 
+    <!--Vendegek-->
     <vendeg vkod="v1">
         <nev></nev>
         <eletkor></eletkor>
@@ -90,7 +94,13 @@
         </cim>
     </vendeg>
 
-    <rendeles>
+    <!--Rendelesek-->
+    <rendeles rkod="r1">
+        <osszeg></osszeg>
+        <etel></etel>
+    </rendeles>
+    
+    <rendeles rkod="r1">
         <osszeg></osszeg>
         <etel></etel>
     </rendeles>
