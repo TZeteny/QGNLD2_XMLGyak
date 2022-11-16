@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<xml_stylesheet type = "text/xsl" href = "students_for-each.xsl"?>
+
 <class>
 	<student id="01">
 		<keresztnev>Zeteny</keresztnev>
