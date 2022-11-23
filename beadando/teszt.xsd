@@ -1,0 +1,137 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- tulajdonságok-->
+  <xs:element name="csapatnev" type="xs:string"/>
+  <xs:element name="varos" type="xs:string"/>
+  <xs:element name="mezszin" type="xs:string"/>
+  <xs:element name="nev" type="xs:string"/>
+  <xs:element name="hajszin" type="xs:string"/>
+  <xs:element name="eletkor" type="xs:byte"/>
+  <xs:element name="mezszam" type="xs:byte"/>
+  <xs:element name="utca" type="xs:string"/>
+  <xs:element name="szam" type="xs:byte"/>
+
+  <xs:element name="cim">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="varos"/>
+        <xs:element ref="utca"/>
+        <xs:element ref="szam"/>
+      </xs:sequence>
+    </xs:complexType> 
+  </xs:element>
+
+  <xs:element name="ferohelyek" type="xs:short"/>
+  <xs:element name="gollovok" type="xs:string"/>
+  <xs:element name="eladott-jegyek" type="xs:short"/>
+  <xs:element name="golok-szama" type="xs:byte"/>
+  <xs:element name="nyertes" type="xs:string"/>
+<!-- egyedek-->
+  <xs:element name="csapat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="csapatnev"/>
+        <xs:element ref="varos"/>
+        <xs:element ref="mezszin"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="csaptID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="edzo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nev"/>
+        <xs:element ref="hajszin"/>
+        <xs:element ref="eletkor"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="edzoID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="jatekos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nev"/>
+        <xs:element ref="mezszam"/>
+        <xs:element ref="hajszin"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="jatekosID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="stadion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nev"/>
+        <xs:element ref="cim"/>
+        <xs:element ref="ferohelyek"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="stadionID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="meccs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gollovok" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element ref="eladott-jegyek"/>
+        <xs:element ref="golok-szama"/>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="meccsID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="jatszik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nyertes"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="jID" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+<!-- fő cucc-->
+  <xs:element name="futball">
+
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element ref="csapat" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> csapatok</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element ref="edzo" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> edzok</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element ref="jatekos" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> jatekosok</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element ref="stadion" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> stadionok</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element ref="meccs" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> meccsek</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element ref="jatszik" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> jatszik</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+    </xs:element>
+</xs:schema>
