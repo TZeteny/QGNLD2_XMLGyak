@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<futball noNameSpaceSchemaLocation="XMLSchemaQGNLD2.xsd">
+
+    <!-- csapatok-->
+    <csapat csapatID="c1">
+        <nev>ABCFC</nev>
+        <varos>Budapest</varos>
+        <mezszin>piros</mezszin>
+    </csapat>
+
+    <csapat csapatID="c2">
+        <nev>MTK</nev>
+        <varos>Miskolc</varos>
+        <mezszin>zold</mezszin>
+    </csapat>
+
+    <csapat csapatID="c3">
+        <nev>HalmajSC</nev>
+        <varos>Halmaj</varos>
+        <mezszin>kek</mezszin>
+    </csapat>
+
+    <!-- edzok-->
+    <edzo edzoID="e1" csapat-idegen-kulcs="c1">
+        <nev>Soma</nev>
+        <hajszin>barna</hajszin>
+        <eletkor>28</eletkor>
+    </edzo>
+
+    <edzo edzoID="e2" csapat-idegen-kulcs="c2">
+        <nev>Samu</nev>
+        <hajszin>fekete</hajszin>
+        <eletkor>30</eletkor>
+    </edzo>
+ 
+    <edzo edzoID="e3" csapat-idegen-kulcs="c3">
+        <nev>Pista</nev>
+        <hajszin>voros</hajszin>
+        <eletkor>29</eletkor>
+    </edzo>
+
+    <!-- jatekosok-->
+    <jatekos jatekosID="j1" csapat-idegen-kulcs="c1">
+        <nev>Jose</nev>
+        <mezszam>12</mezszam>
+        <hajszin>szoke</hajszin>
+    </jatekos>
+
+    <jatekos jatekosID="j2" csapat-idegen-kulcs="c1">
+        <nev>Armando</nev>
+        <mezszam>11</mezszam>
+        <hajszin>barna</hajszin>
+    </jatekos>
+
+    <jatekos jatekosID="j3" csapat-idegen-kulcs="c2">
+        <nev>Abel</nev>
+        <mezszam>9</mezszam>
+        <hajszin>barna</hajszin>
+    </jatekos>
+
+    <jatekos jatekosID="j4" csapat-idegen-kulcs="c2">
+        <nev>Rokus</nev>
+        <mezszam>11</mezszam>
+        <hajszin>szoke</hajszin>
+    </jatekos>
+
+    <jatekos jatekosID="j5" csapat-idegen-kulcs="c3">
+        <nev>Abel</nev>
+        <mezszam>8</mezszam>
+        <hajszin>voros</hajszin>
+    </jatekos>
+
+    <jatekos jatekosID="j6" csapat-idegen-kulcs="c3">
+        <nev>Alfonz</nev>
+        <mezszam>12</mezszam>
+        <hajszin>szoke</hajszin>
+    </jatekos>
+
+    <!-- stadionok-->
+    <stadion stadionID="s1">
+        <nev>ABC-Arena</nev>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Vamhaz</utca>
+            <szam>9</szam>
+        </cim>
+        <ferohelyek>20000</ferohelyek>
+    </stadion>
+
+    <stadion stadionID="s2">
+        <nev>Duhongo</nev>
+        <cim>
+            <varos>Miskolc</varos>
+            <utca>Kiraly</utca>
+            <szam>22</szam>
+        </cim>
+        <ferohelyek>18000</ferohelyek>
+    </stadion>
+
+    <stadion stadionID="s3">
+        <nev>Halmaj-Stadion</nev>
+        <cim>
+            <varos>Halmaj</varos>
+            <utca>Danko-Pista</utca>
+            <szam>37</szam>
+        </cim>
+        <ferohelyek>25000</ferohelyek>
+    </stadion>
+
+    <!-- meccsek-->
+    <meccs meccsID="m1" stadion-idegen-kulcs="s1">
+        <gollovok>j1</gollovok>
+        <gollovok>j3</gollovok>
+        <eladott-jegyek>12000</eladott-jegyek>
+        <golok-szama>2</golok-szama>
+    </meccs>
+
+    <meccs meccsID="m2" stadion-idegen-kulcs="s2">
+        <gollovok>j5</gollovok>
+        <eladott-jegyek>18000</eladott-jegyek>
+        <golok-szama>3</golok-szama>
+    </meccs>
+
+    <meccs meccsID="m3" stadion-idegen-kulcs="s3">
+        <gollovok>j2</gollovok>
+        <eladott-jegyek>15000</eladott-jegyek>
+        <golok-szama>1</golok-szama>
+    </meccs>
+
+    <!-- jatszik-->
+    <jatszik jID="01" meccs-idegen-kulcs="m1" csapat-idegen-kulcs="c1">
+        <nyertes></nyertes>
+    </jatszik>
+
+    <jatszik jID="02" meccs-idegen-kulcs="m1" csapat-idegen-kulcs="c2">
+        <nyertes></nyertes>
+    </jatszik>
+
+    <jatszik jID="03" meccs-idegen-kulcs="m2" csapat-idegen-kulcs="c3">
+        <nyertes>c3</nyertes>
+    </jatszik>
+
+    <jatszik jID="04" meccs-idegen-kulcs="m2" csapat-idegen-kulcs="c2">
+        <nyertes>c3</nyertes>
+    </jatszik>
+
+    <jatszik jID="05" meccs-idegen-kulcs="m3" csapat-idegen-kulcs="c1">
+        <nyertes>c1</nyertes>
+    </jatszik>
+
+    <jatszik jID="06" meccs-idegen-kulcs="m3" csapat-idegen-kulcs="c3">
+        <nyertes>c1</nyertes>
+    </jatszik>
+
+</futball>

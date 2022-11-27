@@ -1,0 +1,145 @@
+Root element: futball
+
+Current Element: csapat
+csapatID: c1
+nev: ABCFC
+varos: Budapest
+mezszin: piros
+
+Current Element: csapat
+csapatID: c2
+nev: MTK
+varos: Miskolc
+mezszin: zold
+
+Current Element: csapat
+csapatID: c3
+nev: HalmajSC
+varos: Halmaj
+mezszin: kek
+
+Current Element: edzo
+edzoID: e1
+nev: Soma
+hajszin: barna
+eletkor: 28
+
+Current Element: edzo
+edzoID: e2
+nev: Samu
+hajszin: fekete
+eletkor: 30
+
+Current Element: edzo
+edzoID: e3
+nev: Pista
+hajszin: voros
+eletkor: 29
+
+Current Element: jatekos
+jatekosID: j1
+nev: Jose
+mezszam: 12
+hajszin: szoke
+
+Current Element: jatekos
+jatekosID: j2
+nev: Armando
+mezszam: 11
+hajszin: barna
+
+Current Element: jatekos
+jatekosID: j3
+nev: Abel
+mezszam: 9
+hajszin: barna
+
+Current Element: jatekos
+jatekosID: j4
+nev: Rokus
+mezszam: 11
+hajszin: szoke
+
+Current Element: jatekos
+jatekosID: j5
+nev: Abel
+mezszam: 8
+hajszin: voros
+
+Current Element: jatekos
+jatekosID: j6
+nev: Alfonz
+mezszam: 12
+hajszin: szoke
+
+Current Element: stadion
+stadionID: s1
+nev: ABC-Arena
+cim: 
+            Budapest
+            Vamhaz
+            9
+        
+ferohelyek: 20000
+
+Current Element: stadion
+stadionID: s2
+nev: Duhongo
+cim: 
+            Miskolc
+            Kiraly
+            22
+        
+ferohelyek: 18000
+
+Current Element: stadion
+stadionID: s3
+nev: Halmaj-Stadion
+cim: 
+            Halmaj
+            Danko-Pista
+            37
+        
+ferohelyek: 25000
+
+Current Element: meccs
+meccsID: m1
+gollovok: j1
+eladott-jegyek: 12000
+golok-szama: 2
+
+Current Element: meccs
+meccsID: m2
+gollovok: j5
+eladott-jegyek: 18000
+golok-szama: 3
+
+Current Element: meccs
+meccsID: m3
+gollovok: j2
+eladott-jegyek: 15000
+golok-szama: 1
+
+Current Element: jatszik
+jID: 01
+nyertes: 
+
+Current Element: jatszik
+jID: 02
+nyertes: 
+
+Current Element: jatszik
+jID: 03
+nyertes: c3
+
+Current Element: jatszik
+jID: 04
+nyertes: c3
+
+Current Element: jatszik
+jID: 05
+nyertes: c3
+
+Current Element: jatszik
+jID: 06
+nyertes: c3

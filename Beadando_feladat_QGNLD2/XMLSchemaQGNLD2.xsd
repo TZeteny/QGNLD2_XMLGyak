@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- egyszeru tipusok-->
+
+    <xs:simpleType name="nev-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="hajszin-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="mezszam-type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="eletkor-type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="varos-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="mezszin-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="eladott-jegyek-type">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="gollovok-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="golok-szama-type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="utca-type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="szam-type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ferohelyek-type">
+        <xs:restriction base="xs:int">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- -->
+
+    <xs:element name="futball">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="csapat" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev"/>
+                            <xs:element name="varos"/>
+                            <xs:element name="mezszin"/>
+                        </xs:sequence>
+                        <xs:attribute name="csapatID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="edzo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev"/>
+                            <xs:element name="hajszin"/>
+                            <xs:element name="eletkor"/>
+                        </xs:sequence>
+                        <xs:attribute name="edzoID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="jatekos" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev"/>
+                            <xs:element name="mezszam"/>
+                            <xs:element name="hajszin"/>
+                        </xs:sequence>
+                        <xs:attribute name="jatekosID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="stadion" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nev"/>
+                            <xs:element name="cim">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="varos"/>
+                                        <xs:element name="utca"/>
+                                        <xs:element name="szam"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ferholyek"/>
+                        </xs:sequence>
+                        <xs:attribute name="stadionID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="meccs" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="gollovok"/>
+                            <xs:element name="eladott-jegyek"/>
+                            <xs:element name="golok-szama"/>
+                        </xs:sequence>
+                        <xs:attribute name="meccsID" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="jatszik" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nyertes"/>
+                        </xs:sequence>
+                        <xs:attribute name="j-cs" type="xs:string" use="required"/>
+                        <xs:attribute name="j-m" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    
+        <!-- kulcsok-->
+
+        <xs:key name="csapat-kulcs">
+            <xs:selector xpath="csapat"/>
+            <xs:field xpath="@csapatID"/>
+        </xs:key>
+
+        <xs:key name="edzo-kulcs">
+        <xs:selector xpath="edzo"/>
+        <xs:field xpath="@edzoID"/>
+        </xs:key>
+
+        <xs:key name="jatekos-kulcs">
+        <xs:selector xpath="jatekos"/>
+        <xs:field xpath="@jatekosID"/>
+        </xs:key>
+
+        <xs:key name="stadion-kulcs">
+        <xs:selector xpath="stadion"/>
+        <xs:field xpath="@stadionID"/>
+        </xs:key>
+
+        <xs:key name="meccs-kulcs">
+        <xs:selector xpath="meccs"/>
+        <xs:field xpath="@meccsID"/>
+        </xs:key>
+
+        <!-- idegen kulcsok-->
+
+        <xs:keyref refer="csapat-kulcs" name="csapat-idegen-kulcs">
+            <xs:selector xpath="csapat"/>
+            <xs:field xpath="@csapatID"/>
+        </xs:keyref>
+
+        <xs:keyref refer="meccs-kulcs" name="meccs-idegen-kulcs">
+            <xs:selector xpath="meccs"/>
+            <xs:field xpath="@meccsID"/>
+        </xs:keyref>
+
+        <xs:keyref refer="stadion-kulcs" name="stadion-idegen-kulcs">
+            <xs:selector xpath="stadion"/>
+            <xs:field xpath="@stadionID"/>
+        </xs:keyref>
+
+    </xs:element>
+ 
+</xs:schema>
