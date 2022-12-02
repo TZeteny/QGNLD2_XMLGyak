@@ -56,7 +56,7 @@ public class DomQueryQGNLD2 {
 			}
 		}
 		
-		//12-es mezszamu jatekosok neveii.
+		//12-es mezszamu jatekosok nevei.
 		System.out.println("12-es mezszamu jatekosok nevei.\n");
 		
 		NodeList jatekosLista = doc.getElementsByTagName("jatekos");
@@ -75,6 +75,52 @@ public class DomQueryQGNLD2 {
 			}
 		}
 		System.out.println("");
+		
+		//10nel kisebb mezszamu jatekosok kiirasa.
+		System.out.println("10nel kisebb mezszamu jatekosok kiirasa.\n");
+		//jatekosokon vegigmenni.
+		for(int i = 0; i < jatekosLista.getLength(); i++) {
+			Node jatekos = jatekosLista.item(i);
+			if(jatekos.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) jatekos;
+				//mezszamok ellenorzese.
+				Node n = element.getElementsByTagName("mezszam").item(0);
+				String mezszam = n.getTextContent();
+				//A mezszambol integer kinyerese.
+				int szam = Integer.parseInt(mezszam);
+				//Ha a mezszam kisebb, mint 10, akkor nev es mezszam kiirasa.
+				if(szam < 10) {
+					Node node = element.getElementsByTagName("nev").item(0);
+					String nev = node.getTextContent();				
+					System.out.println("Nev: " + nev);
+					System.out.println("Mezszam: " + mezszam);
+					System.out.println("");
+				}
+			}
+		}
+		
+				//28 evnel idosebb edzok kiirasa.
+				System.out.println("28 evnel idosebb edzok kiirasa.\n");
+				//edzookon vegigmenni.
+				for(int i = 0; i < edzoLista.getLength(); i++) {
+					Node edzo = edzoLista.item(i);
+					if(edzo.getNodeType() == Node.ELEMENT_NODE) {
+						Element element = (Element) edzo;
+						//kor ellenorzese.
+						Node n = element.getElementsByTagName("eletkor").item(0);
+						String eletkor = n.getTextContent();
+						//A korbol integer kinyerese.
+						int kor = Integer.parseInt(eletkor);
+						//Ha a kor nagyobb, mint 28, akkor nev kiirasa.
+						if(kor > 28) {
+							Node node = element.getElementsByTagName("nev").item(0);
+							String nev = node.getTextContent();				
+							System.out.println("Nev: " + nev);
+							System.out.println("eletkor: " + eletkor);
+							System.out.println("");
+						}
+					}
+				}
 		
 		//Egyes csapatban jatszo jatekosok.
 		System.out.println("Egyes csapatban jatszo jatekosok.\n");
@@ -100,6 +146,9 @@ public class DomQueryQGNLD2 {
 				System.out.println("");
 			}
 		}
+		
+		
+		
 		
 	}
 
