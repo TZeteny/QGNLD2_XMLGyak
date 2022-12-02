@@ -10,8 +10,8 @@ public class ObjectQGNLD2 {
     
 		JSONObject j = new JSONObject(); 
     
-		j.put("neptunkod", "kkklll");
 		j.put("hallgato", "hallgato neve");
+		j.put("neptunkod", "kkklll");
 		j.put("szak", "PTI");
 		System.out.println(j.toString());
 	
