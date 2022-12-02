@@ -24,14 +24,16 @@ public class DomModifyQGNLD2 {
 	         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
 	         Document doc = docBuilder.parse(inputFile);
+	         
+	         //Edzo hajszin valtoztatas.
 	         NodeList edzoLista = doc.getElementsByTagName("edzo");
 	         //Edzolistan vegigmenni.
 	         for(int i = 0; i < edzoLista.getLength(); i++) {
 	        	 Node edzo = doc.getElementsByTagName("edzo").item(i);
 	        	 NamedNodeMap attr = edzo.getAttributes();
 	        	 Node nodeAttr = attr.getNamedItem("edzoID");
-	        	 //ID Változtatás
-	        	 nodeAttr.setTextContent("e" + (i));
+	        	 //ID VÃ¡ltoztatÃ¡s
+	        	 nodeAttr.setTextContent("e" + (i+1));
 	        	 //Az edzo gyerekelemein vegigmenni
 	        	 NodeList lista = edzo.getChildNodes(); 
 	        	 for(int t = 0; t < lista.getLength(); t++) {
@@ -75,6 +77,37 @@ public class DomModifyQGNLD2 {
                  szabalytalansagok.appendChild(doc.createTextNode("4"));
                 
              }
+             
+           //Stadion nev valtoztatas.
+	         NodeList stadionLista = doc.getElementsByTagName("stadion");
+	         for(int i = 0; i < stadionLista.getLength(); i++) {
+	        	 Node stadion = doc.getElementsByTagName("stadion").item(i);
+	        	 NamedNodeMap attr = stadion.getAttributes();
+	        	 Node nodeAttr = attr.getNamedItem("stadionID");
+	        	 nodeAttr.setTextContent("s" + (i+1));
+	        	 NodeList lista = stadion.getChildNodes(); 
+	        	 for(int t = 0; t < lista.getLength(); t++) {
+	        		 Node node = lista.item(t);
+	        		 if (node.getNodeType() == Node.ELEMENT_NODE) {
+	        			 Element element = (Element) node;
+	        			 if ("ferohelyek".equals(element.getNodeName())) {
+	                            if ("18000".equals(element.getTextContent())){
+	                                element.setTextContent("18181");
+	                            }
+	                     }
+	        		 } 
+	        	 }
+	         }
+	         
+	         //Masodik stadion eltavolitasa.
+			 for(int i = 0; i < stadionLista.getLength(); i++) {
+				 Node stadion = stadionLista.item(i);
+				 Element element = (Element) stadion;
+					 if(element.getAttribute("stadionID").equals("s2")) {
+						 element.getParentNode().removeChild(element);
+						 break;
+					 }
+			 }
 	         
 	         TransformerFactory transformerFactory = TransformerFactory.newInstance();
 	         Transformer transformer = transformerFactory.newTransformer();
